@@ -3,7 +3,7 @@
 // 3. Possessive Pronouns
 // 4. Reflexive Pronouns
 
-export const pronouns = [
+const pronouns = [
   'i',
   'we',
   'you',
@@ -31,3 +31,5 @@ export const pronouns = [
   'yourselves',
   'themselves',
 ]
+
+export default pronouns;

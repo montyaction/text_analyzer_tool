@@ -1,26 +1,35 @@
-import './index.scss'
+import React from 'react';
+import './index.scss';
 
-const ResultBox = () => {
+type ResultBoxProps = {
+  wordCount: number;
+  charCount: number;
+  sentenceCount: number;
+  paragraphCount: number;
+  pronounCount: number;
+};
+
+const ResultBar: React.FC<ResultBoxProps> = ({ wordCount, charCount, sentenceCount, paragraphCount, pronounCount }) => {
   const resultBar = [
     {
       title: 'Words',
-      value: 0,
+      value: wordCount,
     },
     {
       title: 'Characters',
-      value: 0,
+      value: charCount,
     },
     {
       title: 'Sentences',
-      value: 0,
+      value: sentenceCount,
     },
     {
       title: 'Paragraphs ',
-      value: 0,
+      value: paragraphCount,
     },
     {
       title: 'Pronouns',
-      value: 0,
+      value: pronounCount,
     },
   ]
 
@@ -33,7 +42,7 @@ const ResultBox = () => {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ResultBox
+export default ResultBar
